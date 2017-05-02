@@ -1,4 +1,7 @@
 <h1>All photos</h1>
+<div>
+  <a href ="http://localhost:3000/photos/new">Add a new photo</a>
+</div>
 
 <% @list_of_photos.each do |photo| %>
 <div>
@@ -9,9 +12,19 @@
   </p>
 
   <div>
-    <a href ="http://localhost:3000/photos/<%= photo.id %>">Detail</a>
-    <a href ="http://localhost:3000/photos/<%= photo.id %>/edit">Edit</a>
-    <a href ="http://localhost:3000/delete_photo/<%= photo.id %>">Delete</a>
+    <a href ="http://localhost:3000/photos/<%= photo.id %>" class ="btn btn-default btn-block">
+      Show Details
+    </a>
+  </div>
+  <div>
+    <a href ="http://localhost:3000/photos/<%= photo.id %>/edit" class ="btn btn-default btn-block">
+      Edit
+    </a>
+  </div>
+  <div>
+    <a href ="http://localhost:3000/delete_photo/<%= photo.id %>" class ="btn btn-default btn-block">
+      Delete
+    </a>
   </div>
 </div>
 <% end %>
